@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_flutter/screen/detail_screen.dart';
+import 'package:navigation_flutter/screen/home_screen.dart';
+import 'package:navigation_flutter/screen/setting_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,6 +19,13 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
+      //home: HomeScreen(),
+      initialRoute: '/',
+      routes: {
+        '/' : (_) =>HomeScreen(),
+        DetailScreen.route : (_) => DetailScreen(),
+        SettingScreen.route : (_) => SettingScreen(),
+      },
     );
   }
 }
